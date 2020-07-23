@@ -35,7 +35,7 @@ dependencies {
     // Így lehet megadni, a másik library depencency-jét
     implementation project(path: ':testlibrary')
 
-    //implementation 'com.attrecto:testlibrary:0.1'
+//    implementation 'com.github.bnemeth:testlibrary:e0bed31cf4'
 
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'

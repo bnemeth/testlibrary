@@ -34,27 +34,3 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 }
-
-apply plugin: 'maven-publish'
-
-task sourceJar(type: Jar) {
-    from android.sourceSets.main.java.srcDirs
-    classifier "sources"
-}
-
-publishing {
-    publications {
-        bar(MavenPublication) {
-            groupId 'com.attrecto'
-            artifactId 'testlibrary'
-            version '0.1'
-            artifact(sourceJar)
-            artifact("$buildDir/outputs/aar/testlibrary-debug.aar")
-        }
-    }
-    repositories {
-        maven {
-            url "$buildDir/repo"
-        }
-    }
-}
